@@ -24,71 +24,6 @@ import {
   LayoutDashboard
 } from "lucide-react";
 
-function AppleIcon({ className }: { className?: string }) {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="26" className={className} fill="none" viewBox="0 0 21 26">
-      <path fill="#fff" d="M17.058 13.83a5.5 5.5 0 0 1 .704-2.616 5.4 5.4 0 0 1 1.87-1.95 5.55 5.55 0 0 0-1.901-1.706 5.5 5.5 0 0 0-2.459-.668c-1.834-.194-3.613 1.105-4.547 1.105-.953 0-2.392-1.086-3.942-1.054a5.8 5.8 0 0 0-4.886 3.002c-2.113 3.682-.537 9.096 1.486 12.073 1.013 1.458 2.196 3.086 3.745 3.028 1.515-.063 2.081-.973 3.91-.973 1.812 0 2.343.973 3.923.937 1.626-.027 2.65-1.465 3.627-2.936a12.1 12.1 0 0 0 1.66-3.402 5.23 5.23 0 0 1-2.319-1.936 5.3 5.3 0 0 1-.871-2.903m-2.984-8.9a5.38 5.38 0 0 0 1.217-3.84 5.4 5.4 0 0 0-3.504 1.827 5.1 5.1 0 0 0-1.249 3.697 4.45 4.45 0 0 0 1.96-.432 4.5 4.5 0 0 0 1.576-1.251"></path>
-    </svg>
-  );
-}
-
-function PlayStoreIcon({ className }: { className?: string }) {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="30" className={className} fill="none" viewBox="0 0 27 30">
-      <path fill="url(#pm_paint0)" d="m1.458 28.959-.08-.078c-.318-.337-.505-.86-.505-1.539v.16V3.284v.166c0-.734.218-1.287.584-1.618l13.51 13.564z"></path>
-      <path fill="url(#pm_paint1)" d="m19.47 19.919-4.505-4.523 4.504-4.522 5.436 3.101c.69.394 1.078.902 1.143 1.42v.002c-.065.518-.452 1.027-1.143 1.42z"></path>
-      <path fill="url(#pm_paint2)" d="M2.421 29.316a1.4 1.4 0 0 1-.963-.357l13.507-13.563 4.505 4.523-15.827 9.029c-.438.25-.853.368-1.222.368"></path>
-      <path fill="url(#pm_paint3)" d="M14.965 15.397 1.457 1.832a1.4 1.4 0 0 1 .962-.355c.37 0 .785.118 1.224.368l15.826 9.03z"></path>
-      <defs>
-        <linearGradient id="pm_paint0" x1="13.768" x2="-4.606" y1="3.034" y2="21.333" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#00A0FF"></stop>
-          <stop offset="0.26" stopColor="#00BEFF"></stop>
-          <stop offset="0.76" stopColor="#00DFFF"></stop>
-          <stop offset="1" stopColor="#00E3FF"></stop>
-        </linearGradient>
-        <linearGradient id="pm_paint1" x1="26.89" x2="0.507" y1="15.396" y2="15.396" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#FFE000"></stop>
-          <stop offset="0.409" stopColor="#FFBD00"></stop>
-          <stop offset="0.775" stopColor="orange"></stop>
-          <stop offset="1" stopColor="#FF9C00"></stop>
-        </linearGradient>
-        <linearGradient id="pm_paint2" x1="17.069" x2="-7.847" y1="17.909" y2="42.722" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#FF3A44"></stop>
-          <stop offset="1" stopColor="#C31162"></stop>
-        </linearGradient>
-        <linearGradient id="pm_paint3" x1="-2.045" x2="9.081" y1="-6.307" y2="4.773" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#32A071"></stop>
-          <stop offset="0.069" stopColor="#2DA771"></stop>
-          <stop offset="0.476" stopColor="#15CF74"></stop>
-          <stop offset="0.801" stopColor="#06E775"></stop>
-          <stop offset="1" stopColor="#00F076"></stop>
-        </linearGradient>
-      </defs>
-    </svg>
-  );
-}
-
-function StoreBadges({ playHref }: { playHref: string }) {
-  return (
-    <div className="flex flex-wrap gap-2 mt-6">
-      <a href="#" className="rounded-xl flex gap-2 items-center py-2 px-3 border border-white/10 bg-black cursor-pointer transition-all duration-300 hover:bg-neutral-900 active:scale-95">
-        <AppleIcon className="w-4 h-5" />
-        <div className="text-left">
-          <span className="block font-light text-[8px] text-white leading-tight">Download on the</span>
-          <span className="block font-semibold text-[11px] text-white leading-tight">App Store</span>
-        </div>
-      </a>
-      <a href={playHref} target="_blank" rel="noopener noreferrer" className="rounded-xl flex gap-2 items-center py-2 px-3 border border-white/10 bg-black cursor-pointer transition-all duration-300 hover:bg-neutral-900 active:scale-95">
-        <PlayStoreIcon className="w-4 h-5" />
-        <div className="text-left">
-          <span className="block font-light text-[8px] text-white leading-tight">GET IT ON</span>
-          <span className="block font-semibold text-[11px] text-white leading-tight">Google Play</span>
-        </div>
-      </a>
-    </div>
-  );
-}
-
 export default function Home() {
 
   const sectors = [
@@ -314,68 +249,60 @@ export default function Home() {
               <p className="text-muted text-sm mt-4 leading-relaxed">A mobile app for passengers, a mobile app for drivers, and a web dashboard for the organizations that run intercity transport, all built on the same platform.</p>
             </motion.div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                name: "Soole for Passenger",
-                icon: Users,
-                tag: "Mobile App",
-                desc: "Book intercity rides, track your driver in real time, and pay securely, all from one app.",
-                features: ["Instant intercity booking", "Live trip tracking", "Secure in-app payments"],
-                cta: null,
-                showStoreBadges: true,
-                playHref: "https://play.google.com/store/apps/details?id=ng.soole.soole_app&pcampaignid=web_share",
-              },
-              {
-                name: "Soole for Driver",
-                icon: Navigation,
-                tag: "Mobile App",
-                desc: "Accept trips, follow optimized routes, and get paid instantly with the driver companion app.",
-                features: ["Trip requests & navigation", "Earnings paid instantly", "Route and schedule management"],
-                cta: null,
-                showStoreBadges: true,
-                playHref: "#",
-              },
-              {
-                name: "Soole for Organization",
-                icon: LayoutDashboard,
-                tag: "Web Dashboard",
-                desc: "A real-time control center for routes, drivers, terminal bookings, and revenue, no spreadsheets.",
-                features: ["Live booking & revenue overview", "Route and terminal queue management", "Driver onboarding & payout tracking"],
-                cta: { label: "Visit the Dashboard", href: "https://dashboard.soole.ng" },
-                showStoreBadges: false,
-                playHref: "",
-              },
-            ].map((product, i) => {
-              const Icon = product.icon;
-              return (
-                <motion.div key={product.name} className="p-8 rounded-3xl bg-card-bg border border-border transition-all duration-300 group flex flex-col" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.1 }}>
-                  <div className="flex items-start justify-between mb-6">
-                    <div className="w-12 h-12 rounded-2xl bg-accent flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-black transition-all duration-300">
-                      <Icon size={20} />
+          <motion.div className="rounded-3xl bg-card-bg border border-border p-8 md:p-12" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
+              {[
+                {
+                  name: "Soole for Passenger",
+                  icon: Users,
+                  tag: "Mobile App",
+                  desc: "Book intercity rides, track your driver in real time, and pay securely, all from one app.",
+                  features: ["Instant intercity booking", "Live trip tracking", "Secure in-app payments"],
+                },
+                {
+                  name: "Soole for Driver",
+                  icon: Navigation,
+                  tag: "Mobile App",
+                  desc: "Accept trips, follow optimized routes, and get paid instantly with the driver companion app.",
+                  features: ["Trip requests & navigation", "Earnings paid instantly", "Route and schedule management"],
+                },
+                {
+                  name: "Soole for Organization",
+                  icon: LayoutDashboard,
+                  tag: "Web Dashboard",
+                  desc: "A real-time control center for routes, drivers, terminal bookings, and revenue, no spreadsheets.",
+                  features: ["Live booking & revenue overview", "Route and terminal queue management", "Driver onboarding & payout tracking"],
+                },
+              ].map((product, i) => {
+                const Icon = product.icon;
+                return (
+                  <div key={product.name} className={`flex flex-col ${i > 0 ? "md:border-l md:border-border md:pl-8" : ""}`}>
+                    <div className="flex items-start justify-between mb-6">
+                      <div className="w-12 h-12 rounded-2xl bg-accent flex items-center justify-center text-primary">
+                        <Icon size={20} />
+                      </div>
+                      <span className="text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full border border-primary/20 bg-primary/5 text-primary">{product.tag}</span>
                     </div>
-                    <span className="text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full border border-primary/20 bg-primary/5 text-primary">{product.tag}</span>
+                    <h4 className="text-foreground font-bold text-lg mb-2">{product.name}</h4>
+                    <p className="text-muted text-sm leading-relaxed mb-6">{product.desc}</p>
+                    <ul className="flex flex-col gap-2.5 border-t border-border pt-5 mt-auto">
+                      {product.features.map((feat, idx) => (
+                        <li key={idx} className="flex gap-2 text-xs text-muted items-start">
+                          <CheckCircle size={14} className="text-primary mt-0.5 shrink-0" />
+                          <span>{feat}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                  <h4 className="text-foreground font-bold text-lg mb-2">{product.name}</h4>
-                  <p className="text-muted text-sm leading-relaxed mb-6">{product.desc}</p>
-                  <ul className="flex flex-col gap-2.5 border-t border-border pt-5 mb-6">
-                    {product.features.map((feat, idx) => (
-                      <li key={idx} className="flex gap-2 text-xs text-muted items-start">
-                        <CheckCircle size={14} className="text-primary mt-0.5 shrink-0" />
-                        <span>{feat}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  {product.cta && (
-                    <a href={product.cta.href} target="_blank" rel="noopener noreferrer" className="mt-auto inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-black px-6 py-3 rounded-full font-bold text-sm transition-all duration-300 active:scale-95">
-                      {product.cta.label} <ArrowRight size={16} />
-                    </a>
-                  )}
-                  {product.showStoreBadges && <StoreBadges playHref={product.playHref} />}
-                </motion.div>
-              );
-            })}
-          </div>
+                );
+              })}
+            </div>
+            <div className="mt-10 pt-8 border-t border-border flex justify-center">
+              <a href="https://soole.ng" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-black px-8 py-4 rounded-full font-bold transition-all duration-300 active:scale-95">
+                Visit Soole.ng <ArrowRight size={18} />
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
 
