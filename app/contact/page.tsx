@@ -73,7 +73,7 @@ export default function ContactPage() {
             <div className="flex flex-col gap-6">
               {[
                 { icon: Users, title: "Passengers & Drivers", desc: "Questions about booking, trips, or the Soole app." },
-                { icon: Truck, title: "Transport Operators", desc: "Pilot Soole and fleet tools with your vehicles and routes." },
+                { icon: Truck, title: "Transport Organizations", desc: "Pilot Soole and fleet tools with your vehicles and routes." },
                 { icon: Building2, title: "Partners & Investors", desc: "Explore partnerships across the Mobiliti Africa ecosystem." },
               ].map((item, i) => {
                 const Icon = item.icon;

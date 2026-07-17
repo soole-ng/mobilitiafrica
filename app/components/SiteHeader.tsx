@@ -28,7 +28,7 @@ export default function SiteHeader() {
   const toggleTheme = () => {
     const next = theme === "dark" ? "light" : "dark";
     setTheme(next);
-    document.documentElement.classList.toggle("light", next === "light");
+    document.documentElement.setAttribute("data-theme", next);
     window.localStorage.setItem("theme", next);
   };
 

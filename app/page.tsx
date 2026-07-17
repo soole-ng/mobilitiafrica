@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import SiteHeader from "./components/SiteHeader";
 import SiteFooter from "./components/SiteFooter";
 import SooleLogo from "./components/SooleLogo";
+import HeroMapAnimation from "./components/HeroMapAnimation";
 import {
   Navigation,
   Cpu,
@@ -179,14 +180,12 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
-        <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
-          <source src="/images/hero-video.mp4" type="video/mp4" />
-        </video>
+        <HeroMapAnimation className="absolute inset-0 w-full h-full" />
         <div className="absolute inset-0 bg-background/75" />
         <div className="max-w-7xl mx-auto px-6 py-24 w-full relative z-10">
           <div className="max-w-3xl flex flex-col gap-8">
             <motion.h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground font-sans leading-tight" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }}>
-              The Parent Tech Stack for <br className="hidden sm:inline" />
+              The Tech Stack for <br className="hidden sm:inline" />
               <span className="text-primary">African Movement</span>
             </motion.h1>
             <motion.p className="text-muted text-base sm:text-lg max-w-2xl leading-relaxed" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
@@ -198,18 +197,6 @@ export default function Home() {
               </a>
             </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* Mission Statement */}
-      <section className="py-20 border-t border-border bg-section-alt-strong relative overflow-hidden">
-        <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
-          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
-            <blockquote className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
-              "We are not building another ridesharing application. We are building the{" "}
-              <span className="text-primary">operating system for African movement.</span>"
-            </blockquote>
-          </motion.div>
         </div>
       </section>
 
@@ -286,6 +273,18 @@ export default function Home() {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      {/* Mission Statement */}
+      <section className="py-20 border-t border-border bg-section-alt-strong relative overflow-hidden">
+        <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
+            <blockquote className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+              "We are not building another ridesharing application. We are building the{" "}
+              <span className="text-primary">operating system for African movement.</span>"
+            </blockquote>
+          </motion.div>
         </div>
       </section>
 
@@ -399,7 +398,7 @@ export default function Home() {
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
                 {[
-                  { icon: Truck, title: "Transport Operators", desc: "Pilot Soole and fleet tools with your vehicles and routes." },
+                  { icon: Truck, title: "Transport Organizations", desc: "Pilot Soole and fleet tools with your vehicles and routes." },
                   { icon: Building2, title: "Institutional Investors", desc: "Back the foundational infrastructure for African transit." },
                   { icon: Globe, title: "Government & Regulators", desc: "Explore road intelligence and smart mobility pilots." },
                 ].map((item, i) => {
