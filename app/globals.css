@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+:root {
+  --background: #05080A;
+  --foreground: #F9FFEB;
+  --card-bg: #0C1316;
+  --primary: #C9EC7C;
+  --primary-hover: #b5d66c;
+  --accent: #1E2E35;
+  --muted: #8E9A9F;
+  --border: rgba(255, 255, 255, 0.08);
+  --surface-alt: rgba(255, 255, 255, 0.05);
+  --surface-alt-hover: rgba(255, 255, 255, 0.1);
+  --section-alt: rgba(0, 0, 0, 0.2);
+  --section-alt-strong: rgba(0, 0, 0, 0.4);
+}
+
+:root.light {
+  --background: #F2F4EC;
+  --foreground: #0E140D;
+  --card-bg: #FFFFFF;
+  --primary: #3F6B12;
+  --primary-hover: #345A0D;
+  --accent: #E2EAD4;
+  --muted: #43504A;
+  --border: rgba(14, 20, 13, 0.16);
+  --surface-alt: rgba(14, 20, 13, 0.05);
+  --surface-alt-hover: rgba(14, 20, 13, 0.09);
+  --section-alt: rgba(14, 20, 13, 0.035);
+  --section-alt-strong: rgba(14, 20, 13, 0.07);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card-bg: var(--card-bg);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-surface-alt: var(--surface-alt);
+  --color-surface-alt-hover: var(--surface-alt-hover);
+  --color-section-alt: var(--section-alt);
+  --color-section-alt-strong: var(--section-alt-strong);
+  --font-sans: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar for premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #05080A;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E2E35;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C9EC7C;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(12, 19, 22, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(201, 236, 124, 0.1);
+}
+
+:root.light .glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(14, 20, 13, 0.1);
+  box-shadow: 0 1px 2px rgba(14, 20, 13, 0.06);
+}
+
+/* Sharper card definition in light mode */
+:root.light .bg-card-bg {
+  box-shadow: 0 1px 2px rgba(14, 20, 13, 0.05), 0 4px 16px rgba(14, 20, 13, 0.05);
+}
+
+/* Logo: white-outline variant on dark backgrounds, black-outline variant in light mode */
+.logo-light-variant {
+  opacity: 0;
+}
+:root.light .logo-dark-variant {
+  opacity: 0;
+}
+:root.light .logo-light-variant {
+  opacity: 1;
+}
