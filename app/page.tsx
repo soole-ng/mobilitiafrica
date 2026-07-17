@@ -122,12 +122,12 @@ export default function Home() {
       id: "iot",
       icon: Cpu,
       title: "IoT & Embedded Hardware",
-      desc: "Designing and assembly of custom physical hardware units for deep telemetry and CAN diagnostics.",
-      active: true,
-      tag: "Active (Telemetry)",
+      desc: "Physical hardware for deep telemetry and vehicle diagnostics, planned for a future phase.",
+      active: false,
+      tag: "Roadmap",
       features: [
-        "In-vehicle GPS trackers running C/C++ firmware",
-        "CAN bus OBD-II diagnostic units",
+        "In-vehicle GPS trackers",
+        "OBD-II diagnostic units",
         "Solar-assisted cargo security padlocks"
       ]
     },
@@ -192,7 +192,7 @@ export default function Home() {
             </motion.p>
             <motion.div className="flex flex-wrap gap-4 pt-4" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.3 }}>
               <a href="#sectors" className="flex items-center gap-2 bg-primary hover:bg-primary-hover text-black px-8 py-4 rounded-full font-bold transition-all duration-300 active:scale-95">
-                Explore Verticals <ArrowRight size={18} />
+                See What We Do <ArrowRight size={18} />
               </a>
             </motion.div>
           </div>
@@ -212,7 +212,7 @@ export default function Home() {
             We begin with software. We grow through data, partnerships, and trusted operations. We build each new mobility layer only when it creates clear value for African users and organizations.
           </p>
           <a href="#sectors" className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-black px-8 py-4 rounded-full font-bold transition-all duration-300 active:scale-95">
-            Explore Verticals <ArrowRight size={18} />
+            See What We Do <ArrowRight size={18} />
           </a>
         </motion.div>
       </section>
@@ -229,7 +229,7 @@ export default function Home() {
                 Unverified drivers and vehicles put passengers and cargo at risk. African countries pay an average of <span className="text-foreground font-semibold">11.4% of import value</span> on international transport, compared to 6.8% in developed countries (UNCTAD). Poor real-time tracking makes routes hard to trust, and inefficient, aging fleets add unnecessary greenhouse gas emissions.
               </p>
               <p className="text-muted text-sm leading-relaxed">
-                Resolving this requires more than copying existing solutions. It requires designing custom hardware, low-bandwidth software, and clean energy technology built specifically for Africa's roads, climate, and infrastructure realities, not importing systems designed for other environments.
+                Fixing this takes more than copying what works elsewhere. Today we're focused on software that works on slow networks and is built specifically for Africa's roads and realities, with hardware and clean energy tools planned for the future, not systems built for somewhere else.
               </p>
             </motion.div>
             <div className="grid grid-cols-2 gap-6">
@@ -258,9 +258,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
             <div className="flex flex-col gap-4">
-              <h2 className="text-3xl sm:text-4xl font-bold text-foreground font-sans">Our Operational Verticals</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold text-foreground font-sans">What We Do</h2>
             </div>
-            <p className="text-muted max-w-md text-sm leading-relaxed">We cover the entire value chain of movement. While we currently feature ride-sharing through Soole and telemetry setups, we register all pathways on our roadmap.</p>
+            <p className="text-muted max-w-md text-sm leading-relaxed">We cover every part of how people move. Right now, our main product is Soole ride-sharing, everything else here is on our roadmap for later.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {sectors.map((sector, index) => {
@@ -383,14 +383,14 @@ export default function Home() {
       <section id="ecosystem" className="py-16 border-t border-border bg-background">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground font-sans leading-tight mt-2">The Integrated Ecosystem</h2>
-            <p className="text-muted text-sm leading-relaxed mt-4">We are building secure transportation and monitoring around a growing pipeline of infrastructure, route intelligence, driver verification, and terminal visibility that reinforce each other as the network grows. This shared platform approach lets us scale new capabilities without rebuilding identity, payments, and data each time.</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground font-sans leading-tight mt-2">How It All Works Together</h2>
+            <p className="text-muted text-sm leading-relaxed mt-4">We keep transport safe and easy to track by checking drivers, watching trips as they happen, and keeping an eye on terminals. As we grow, these pieces work together so we don't have to rebuild logins, payments, or data each time we add something new.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { step: "1", title: "Collect Route Data", desc: "Capture live trip and route data from Soole passengers and drivers to understand demand and transit patterns across corridors." },
-              { step: "2", title: "Secure the Network", desc: "Verify drivers and organizations, monitor trips in real time, and build the infrastructure pipeline that keeps every journey accountable." },
-              { step: "3", title: "Lower Cost of Movement", desc: "Use that visibility to optimize routes and reduce operating costs for organizations, drivers, and passengers alike." },
+              { step: "1", title: "Collect Route Data", desc: "Gather live trip and route data from Soole passengers and drivers to see demand and travel patterns across the country." },
+              { step: "2", title: "Keep the Network Safe", desc: "Check drivers and organizations, watch trips as they happen, and keep a record so every journey is accountable." },
+              { step: "3", title: "Lower Cost of Movement", desc: "Use that information to plan better routes and cut costs for organizations, drivers, and passengers alike." },
             ].map((item, i) => (
               <motion.div key={i} className="p-8 rounded-3xl bg-card-bg border border-border relative group overflow-hidden transition-all duration-300" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.15 }}>
                 <div className="w-12 h-12 rounded-2xl bg-accent flex items-center justify-center text-primary font-bold text-lg mb-6">{item.step}</div>
@@ -408,10 +408,10 @@ export default function Home() {
           <motion.div className="bg-card-bg border border-border rounded-[48px] p-8 md:p-16 relative overflow-hidden" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
             <div className="relative z-10 max-w-3xl">
               <h2 className="text-3xl sm:text-4xl font-bold text-foreground font-sans mb-6 leading-tight">
-                We are building with operators, governments, and investors who believe Africa's mobility can be world-class.
+                We work with organizations, governments, and investors who want to make African transport better.
               </h2>
               <p className="text-muted text-sm leading-relaxed mb-10 max-w-xl">
-                Whether you are a transport operator, a technology partner, a development finance institution, or a government agency, there is a structured role for you in the Mobiliti Africa ecosystem.
+                Whether you run a transport organization, a tech company, a funding group, or a government agency, there's a place for you to work with Mobiliti Africa.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
                 {[

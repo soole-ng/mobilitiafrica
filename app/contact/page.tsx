@@ -37,7 +37,7 @@ export default function ContactPage() {
               {[
                 { icon: Users, title: "Passengers & Drivers", desc: "Questions about booking, trips, or the Soole app." },
                 { icon: Truck, title: "Transport Organizations", desc: "Pilot Soole and fleet tools with your vehicles and routes." },
-                { icon: Building2, title: "Partners & Investors", desc: "Explore partnerships across the Mobiliti Africa ecosystem." },
+                { icon: Building2, title: "Partners & Investors", desc: "Explore ways to work with Mobiliti Africa." },
               ].map((item, i) => {
                 const Icon = item.icon;
                 return (

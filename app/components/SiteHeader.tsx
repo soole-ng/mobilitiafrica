@@ -7,9 +7,9 @@ import { Menu, X, Sun, Moon } from "lucide-react";
 import SooleLogo from "./SooleLogo";
 
 const NAV_LINKS = [
-  { href: "/#sectors", label: "Sectors" },
+  { href: "/#sectors", label: "What We Do" },
   { href: "/#products", label: "Products" },
-  { href: "/#ecosystem", label: "Ecosystem" },
+  { href: "/#ecosystem", label: "How It Works" },
   { href: "/contact", label: "Contact" },
 ];
 

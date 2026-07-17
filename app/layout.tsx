@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mobiliti Africa | Transportation Infrastructure & Logistics Tech Stack",
-  description: "Mobiliti Africa is the parent technology enterprise engineering IoT hardware, telemetry solutions, and intelligent software ecosystems to power transit across Africa.",
+  title: "Mobiliti Africa | Intercity Mobility Technology",
+  description: "Mobiliti Africa builds software to power intercity transport across Africa, starting with Soole, with telematics and hardware planned for the future.",
 };
 
 export default function RootLayout({

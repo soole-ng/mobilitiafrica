@@ -9,7 +9,7 @@ export default function SiteFooter() {
             <SooleLogo className="w-7 h-7" />
             MOBILITI <span className="text-primary">AFRICA</span>
           </span>
-          <p className="text-base text-muted leading-relaxed max-w-xs">A mobility technology holding company engineering software, telematics, and clean-energy solutions to make African movement safer and more efficient.</p>
+          <p className="text-base text-muted leading-relaxed max-w-xs">A mobility technology company building software today, with telematics and clean-energy tools planned for the future, to make African movement safer and more efficient.</p>
           <p className="text-sm text-muted font-mono mt-2">Incorporated in Nigeria. Expanding across Africa.</p>
         </div>
         <div>
