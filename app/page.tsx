@@ -126,7 +126,7 @@ export default function Home() {
               Mobiliti Africa is a mobility technology company created to improve the movement of people, goods, and essential services across the continent. Starting with our foundation in route intelligence through Soole, we are building an integrated ecosystem of telematics, clean-energy solutions, and physical infrastructure to serve as the operating system for African movement. Passengers, drivers, and transport organizations all run on the same Soole platform.
             </motion.p>
             <motion.div className="flex flex-wrap gap-4 pt-4" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.3 }}>
-              <a href="#sectors" className="flex items-center gap-2 bg-primary hover:bg-primary-hover text-black px-8 py-4 rounded-full font-bold transition-all duration-300 active:scale-95">
+              <a href="#sectors" className="flex items-center gap-2 bg-primary hover:bg-primary-hover text-primary-foreground px-8 py-4 rounded-full font-bold transition-all duration-300 active:scale-95">
                 See What We Do <ArrowRight size={18} />
               </a>
             </motion.div>
@@ -146,7 +146,7 @@ export default function Home() {
           <p className="text-muted text-base leading-relaxed max-w-2xl mx-auto mb-8">
             We begin with software. We grow through data, partnerships, and trusted operations. We build each new mobility layer only when it creates clear value for African users and organizations.
           </p>
-          <a href="#sectors" className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-black px-8 py-4 rounded-full font-bold transition-all duration-300 active:scale-95">
+          <a href="#sectors" className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-primary-foreground px-8 py-4 rounded-full font-bold transition-all duration-300 active:scale-95">
             See What We Do <ArrowRight size={18} />
           </a>
         </motion.div>
@@ -204,7 +204,7 @@ export default function Home() {
                 <motion.div key={sector.id} className="rounded-3xl p-8 bg-card-bg border border-border flex flex-col justify-between transition-all duration-500 group relative overflow-hidden" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.1 }}>
                   <div>
                     <div className="flex items-center justify-between mb-8">
-                      <div className="w-12 h-12 rounded-2xl bg-accent flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-black transition-all duration-300">
+                      <div className="w-12 h-12 rounded-2xl bg-accent flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
                         <Icon size={22} />
                       </div>
                     </div>
@@ -298,7 +298,7 @@ export default function Home() {
               })}
             </div>
             <div className="mt-10 pt-8 border-t border-border flex justify-center">
-              <a href="https://soole.ng" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-black px-8 py-4 rounded-full font-bold transition-all duration-300 active:scale-95">
+              <a href="https://soole.ng" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-primary-foreground px-8 py-4 rounded-full font-bold transition-all duration-300 active:scale-95">
                 Visit Soole.ng <ArrowRight size={18} />
               </a>
             </div>
@@ -356,7 +356,7 @@ export default function Home() {
                   );
                 })}
               </div>
-              <a href="mailto:info@soole.ng" className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-black px-8 py-4 rounded-full font-bold transition-all duration-300 active:scale-95">
+              <a href="mailto:info@soole.ng" className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-primary-foreground px-8 py-4 rounded-full font-bold transition-all duration-300 active:scale-95">
                 <Mail size={18} /> Get In Touch
               </a>
             </div>

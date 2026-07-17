@@ -79,7 +79,7 @@ export default function ContactPage() {
                 <label htmlFor="message" className="text-xs text-muted uppercase tracking-wider">Message</label>
                 <textarea id="message" required rows={5} value={form.message} onChange={handleChange("message")} className="bg-background border border-border rounded-xl px-4 py-3 text-sm text-foreground focus:outline-none focus:border-primary/40 transition-colors resize-none" />
               </div>
-              <button type="submit" className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-black px-8 py-4 rounded-full font-bold transition-all duration-300 active:scale-95">
+              <button type="submit" className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-primary-foreground px-8 py-4 rounded-full font-bold transition-all duration-300 active:scale-95">
                 Send Message <Send size={18} />
               </button>
               <p className="text-muted text-xs mt-4 flex items-center gap-2">
