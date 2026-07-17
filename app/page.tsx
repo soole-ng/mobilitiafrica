@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import SiteHeader from "./components/SiteHeader";
 import SiteFooter from "./components/SiteFooter";
 import SooleLogo from "./components/SooleLogo";
-import HeroMapAnimation from "./components/HeroMapAnimation";
 import {
   Navigation,
   Cpu,
@@ -178,7 +177,7 @@ export default function Home() {
 
       <SiteHeader />
 
-      {/* Hero Section */}
+      {/* Hero Section (previous version, kept for reference)
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <HeroMapAnimation className="absolute inset-0 w-full h-full" />
         <div className="absolute inset-0 bg-background/75" />
@@ -199,9 +198,27 @@ export default function Home() {
           </div>
         </div>
       </section>
+      */}
+
+      {/* Hero Section */}
+      <section className="relative py-20 sm:py-28 flex items-center justify-center overflow-hidden">
+        <motion.div className="max-w-5xl mx-auto px-6 text-center relative z-10" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9 }}>
+          <SooleLogo className="w-40 h-40 sm:w-56 sm:h-56 mx-auto -mb-4" sizes="224px" />
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground leading-tight mb-6 mt-2">
+            Moving Africa.<br />
+            <span className="text-primary">Connecting Opportunity.</span>
+          </h1>
+          <p className="text-muted text-base leading-relaxed max-w-2xl mx-auto mb-8">
+            We begin with software. We grow through data, partnerships, and trusted operations. We build each new mobility layer only when it creates clear value for African users and organizations.
+          </p>
+          <a href="#sectors" className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-black px-8 py-4 rounded-full font-bold transition-all duration-300 active:scale-95">
+            Explore Verticals <ArrowRight size={18} />
+          </a>
+        </motion.div>
+      </section>
 
       {/* The Problem We Solve */}
-      <section className="py-24 border-t border-border bg-background">
+      <section className="py-16 border-t border-border bg-background">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
@@ -237,7 +254,7 @@ export default function Home() {
       </section>
 
       {/* Sectors Section */}
-      <section id="sectors" className="py-24 border-t border-border bg-section-alt">
+      <section id="sectors" className="py-16 border-t border-border bg-section-alt">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
             <div className="flex flex-col gap-4">
@@ -277,7 +294,7 @@ export default function Home() {
       </section>
 
       {/* Mission Statement */}
-      <section className="py-20 border-t border-border bg-section-alt-strong relative overflow-hidden">
+      <section className="py-14 border-t border-border bg-section-alt-strong relative overflow-hidden">
         <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
             <blockquote className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
@@ -289,7 +306,7 @@ export default function Home() {
       </section>
 
       {/* Soole Product Suite Section */}
-      <section id="products" className="py-24 border-t border-border bg-section-alt">
+      <section id="products" className="py-16 border-t border-border bg-section-alt">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
@@ -363,7 +380,7 @@ export default function Home() {
       </section>
 
       {/* Ecosystem Section */}
-      <section id="ecosystem" className="py-24 border-t border-border bg-background">
+      <section id="ecosystem" className="py-16 border-t border-border bg-background">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground font-sans leading-tight mt-2">The Integrated Ecosystem</h2>
@@ -386,7 +403,7 @@ export default function Home() {
       </section>
 
       {/* Partnership CTA Section */}
-      <section id="contact" className="py-24 border-t border-border bg-background">
+      <section id="contact" className="py-16 border-t border-border bg-background">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div className="bg-card-bg border border-border rounded-[48px] p-8 md:p-16 relative overflow-hidden" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
             <div className="relative z-10 max-w-3xl">
@@ -420,19 +437,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Closing Banner */}
-      <section className="py-32 border-t border-border bg-background relative overflow-hidden">
-        <motion.div className="max-w-5xl mx-auto px-6 text-center relative z-10" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.9 }}>
-          <SooleLogo className="w-40 h-40 sm:w-56 sm:h-56 mx-auto -mb-4" sizes="224px" />
-          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground leading-tight mb-6 mt-2">
-            Moving Africa.<br />
-            <span className="text-primary">Connecting Opportunity.</span>
-          </h2>
-          <p className="text-muted text-base leading-relaxed max-w-2xl mx-auto">
-            We begin with software. We grow through data, partnerships, and trusted operations. We build each new mobility layer only when it creates clear value for African users and operators.
-          </p>
-        </motion.div>
-      </section>
 
       <SiteFooter />
 
