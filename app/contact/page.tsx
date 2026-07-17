@@ -16,7 +16,7 @@ export default function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const body = `Name: ${form.firstName} ${form.lastName}\nEmail: ${form.email}\n\n${form.message}`;
-    const mailto = `mailto:hello@soole.ng?subject=${encodeURIComponent(form.subject || "Website Inquiry")}&body=${encodeURIComponent(body)}`;
+    const mailto = `mailto:info@soole.ng?subject=${encodeURIComponent(form.subject || "Website Inquiry")}&body=${encodeURIComponent(body)}`;
     window.location.href = mailto;
   };
 
@@ -33,9 +33,26 @@ export default function ContactPage() {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="flex flex-col gap-6 order-1 lg:order-none">
+              {[
+                { icon: Users, title: "Passengers & Drivers", desc: "Questions about booking, trips, or the Soole app." },
+                { icon: Truck, title: "Transport Organizations", desc: "Pilot Soole and fleet tools with your vehicles and routes." },
+                { icon: Building2, title: "Partners & Investors", desc: "Explore partnerships across the Mobiliti Africa ecosystem." },
+              ].map((item, i) => {
+                const Icon = item.icon;
+                return (
+                  <div key={i} className="p-6 rounded-2xl bg-card-bg border border-border">
+                    <Icon size={18} className="text-primary mb-3" />
+                    <h4 className="text-foreground font-bold text-lg mb-1">{item.title}</h4>
+                    <p className="text-muted text-base leading-relaxed">{item.desc}</p>
+                  </div>
+                );
+              })}
+            </div>
+
             <motion.form
               onSubmit={handleSubmit}
-              className="bg-card-bg border border-border rounded-[32px] p-8 md:p-12 lg:col-span-2"
+              className="bg-card-bg border border-border rounded-[32px] p-8 md:p-12 lg:col-span-2 order-2 lg:order-none"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
@@ -66,26 +83,9 @@ export default function ContactPage() {
                 Send Message <Send size={18} />
               </button>
               <p className="text-muted text-xs mt-4 flex items-center gap-2">
-                <Mail size={14} /> Or email us directly at <a href="mailto:hello@soole.ng" className="text-primary hover:underline">hello@soole.ng</a>
+                <Mail size={14} /> Or email us directly at <a href="mailto:info@soole.ng" className="text-primary hover:underline">info@soole.ng</a>
               </p>
             </motion.form>
-
-            <div className="flex flex-col gap-6">
-              {[
-                { icon: Users, title: "Passengers & Drivers", desc: "Questions about booking, trips, or the Soole app." },
-                { icon: Truck, title: "Transport Organizations", desc: "Pilot Soole and fleet tools with your vehicles and routes." },
-                { icon: Building2, title: "Partners & Investors", desc: "Explore partnerships across the Mobiliti Africa ecosystem." },
-              ].map((item, i) => {
-                const Icon = item.icon;
-                return (
-                  <div key={i} className="p-6 rounded-2xl bg-card-bg border border-border">
-                    <Icon size={18} className="text-primary mb-3" />
-                    <h4 className="text-foreground font-bold text-sm mb-1">{item.title}</h4>
-                    <p className="text-muted text-xs leading-relaxed">{item.desc}</p>
-                  </div>
-                );
-              })}
-            </div>
           </div>
         </div>
       </section>

@@ -429,7 +429,7 @@ export default function Home() {
                   );
                 })}
               </div>
-              <a href="mailto:hello@soole.ng" className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-black px-8 py-4 rounded-full font-bold transition-all duration-300 active:scale-95">
+              <a href="mailto:info@soole.ng" className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-black px-8 py-4 rounded-full font-bold transition-all duration-300 active:scale-95">
                 <Mail size={18} /> Get In Touch
               </a>
             </div>

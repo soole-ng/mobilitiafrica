@@ -23,7 +23,7 @@ export default function SiteFooter() {
           <h4 className="text-foreground font-semibold text-sm uppercase tracking-wider mb-4">Get In Touch</h4>
           <ul className="flex flex-col gap-2.5 text-base">
             <li><a href="/contact" className="hover:text-primary transition-colors">Contact Us</a></li>
-            <li><a href="mailto:hello@soole.ng" className="hover:text-primary transition-colors">hello@soole.ng</a></li>
+            <li><a href="mailto:info@soole.ng" className="hover:text-primary transition-colors">info@soole.ng</a></li>
           </ul>
         </div>
       </div>
