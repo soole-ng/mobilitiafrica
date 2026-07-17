@@ -243,12 +243,6 @@ export default function Home() {
       {/* Soole Product Suite Section */}
       <section id="products" className="py-16 border-t border-border bg-section-alt">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <h2 className="text-3xl sm:text-4xl font-bold text-foreground font-sans mt-4">Everything Soole, in one place</h2>
-              <p className="text-muted text-sm mt-4 leading-relaxed">A mobile app for passengers, a mobile app for drivers, and a web dashboard for the organizations that run intercity transport, all built on the same platform.</p>
-            </motion.div>
-          </div>
           <motion.div className="rounded-3xl bg-card-bg border border-border p-8 md:p-12" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
               {[
