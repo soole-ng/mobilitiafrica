@@ -44,7 +44,7 @@ export default function Home() {
       id: "logistics",
       icon: Truck,
       title: "Industrial Logistics & Freight",
-      desc: "Connecting heavy carriers, container trucks, and cargo centers to optimize freight flows across corridors.",
+      desc: "Connecting heavy carriers, container trucks, and freight hubs to optimize freight flows across corridors.",
       active: false,
       tag: "Roadmap",
       features: [
@@ -63,7 +63,7 @@ export default function Home() {
       features: [
         "In-vehicle GPS trackers",
         "OBD-II diagnostic units",
-        "Solar-assisted cargo security padlocks"
+        "Solar-assisted security padlocks"
       ]
     },
     {
@@ -161,7 +161,7 @@ export default function Home() {
                 Africa's movement has a security, cost, and emissions problem
               </h2>
               <p className="text-muted text-sm leading-relaxed mb-6">
-                Unverified drivers and vehicles put passengers and cargo at risk. Poor transport infrastructure is estimated to cut Africa's economic growth by about <span className="text-foreground font-semibold">2 percentage points a year</span> (OECD). Poor real-time tracking makes routes hard to trust, and inefficient, aging fleets add unnecessary greenhouse gas emissions.
+                Unverified drivers and vehicles put passengers at risk. Poor transport infrastructure is estimated to cut Africa's economic growth by about <span className="text-foreground font-semibold">2 percentage points a year</span> (OECD). Poor real-time tracking makes routes hard to trust, and inefficient, aging fleets add unnecessary greenhouse gas emissions.
               </p>
               <p className="text-muted text-sm leading-relaxed">
                 Fixing this takes more than copying what works elsewhere. Today we're focused on software that works on slow networks and is built specifically for Africa's roads and realities, with hardware and clean energy tools planned for the future, not systems built for somewhere else.
@@ -169,9 +169,9 @@ export default function Home() {
             </motion.div>
             <div className="grid grid-cols-2 gap-6">
               {[
-                { stat: "Security", label: "Unverified drivers and vehicles put passengers and cargo at risk", icon: Shield },
+                { stat: "Security", label: "Unverified drivers and vehicles put passengers at risk", icon: Shield },
                 { stat: "Cost", label: "Higher transit costs than developed markets squeeze margins", icon: BarChart3 },
-                { stat: "Tracking", label: "Poor real-time visibility makes routes and cargo hard to trust", icon: MapPin },
+                { stat: "Tracking", label: "Poor real-time visibility makes routes hard to trust", icon: MapPin },
                 { stat: "Emissions", label: "Inefficient routing and aging fleets add greenhouse gas", icon: Leaf },
               ].map((item, i) => {
                 const Icon = item.icon;
