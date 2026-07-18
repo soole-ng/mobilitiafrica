@@ -161,7 +161,7 @@ export default function Home() {
                 Africa's movement has a security, cost, and emissions problem
               </h2>
               <p className="text-muted text-sm leading-relaxed mb-6">
-                Unverified drivers and vehicles put passengers and cargo at risk. African countries pay an average of <span className="text-foreground font-semibold">11.4% of import value</span> on international transport, compared to 6.8% in developed countries (UNCTAD). Poor real-time tracking makes routes hard to trust, and inefficient, aging fleets add unnecessary greenhouse gas emissions.
+                Unverified drivers and vehicles put passengers and cargo at risk. Poor transport infrastructure is estimated to cut Africa's economic growth by about <span className="text-foreground font-semibold">2 percentage points a year</span> (OECD). Poor real-time tracking makes routes hard to trust, and inefficient, aging fleets add unnecessary greenhouse gas emissions.
               </p>
               <p className="text-muted text-sm leading-relaxed">
                 Fixing this takes more than copying what works elsewhere. Today we're focused on software that works on slow networks and is built specifically for Africa's roads and realities, with hardware and clean energy tools planned for the future, not systems built for somewhere else.
