@@ -141,7 +141,7 @@ export default function Home() {
           <SooleLogo className="w-40 h-40 sm:w-56 sm:h-56 mx-auto -mb-4" sizes="224px" />
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground leading-tight mb-6 mt-2">
             Moving Africa.<br />
-            <span className="text-primary">Connecting Opportunity.</span>
+            <span className="text-primary">Connecting Opportunities.</span>
           </h1>
           <p className="text-muted text-base leading-relaxed max-w-2xl mx-auto mb-8">
             We begin with software. We grow through data, partnerships, and trusted operations. We build each new mobility layer only when it creates clear value for African users and organizations.
